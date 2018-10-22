@@ -1,0 +1,9 @@
+.bg-indigo{
+	background-color: #0a0082;
+}
+#image-profile{
+	margin-bottom: 10px;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+}
