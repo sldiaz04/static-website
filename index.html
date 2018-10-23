@@ -5,17 +5,17 @@
     </title>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <link href="styles.css" rel="stylesheet" type="text/css"/>
         <!-- Bootstrap -->
         <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet"/>
+
         <!-- Fontawesome Icons -->
         <script crossorigin="anonymous" defer="" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" src="https://use.fontawesome.com/releases/v5.0.9/js/all.js">
          </script>
         <!-- Google Icons-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
         
-        <link rel="stylesheet" href="b4_sidebar.css"/>
-        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="css/b4_sidebar.css"/>
+        <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
     <header class="bg-indigo">
@@ -94,13 +94,22 @@
                         Preguntas frecuentes
                     </a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-warning" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe"></i></a>
+                    <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
+                        <a href="#" class="dropdown-item"><img class="languages mr-2" src="flags/es.png" alt="Español">Español</a>
+                        <a href="#" class="dropdown-item"><img class="languages mr-2" src="flags/us.png" alt="English">English</a>
+                        <a href="#" class="dropdown-item"><img class="languages mr-2" src="flags/de.png" alt="Deutsch">Deutsch</a>
+                        <a href="#" class="dropdown-item"><img class="languages mr-2" src="flags/fr.png" alt="Français">Français</a>
+                    </div>
+                </li>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link text-warning" href="#"><i class="fas fa-heart"></i><span class="">2</span></a>
+                    <a class="nav-link text-warning" href="#"><i class="fas fa-heart"></i><span class="badge badge-pill badge-danger">200</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-warning" href="#"><i class="fas fa-shopping-cart"></i><span class="">1</span></a>
+                    <a class="nav-link text-warning" href="#"><i class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-danger">10</span></a>
                 </li>
             </ul>
         </div>
@@ -111,6 +120,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script crossorigin="anonymous" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="b4_sidebar.js"></script>
-    <script src="fullscreen.js"></script>
+    <script src="js/b4_sidebar.js"></script>
+    <script src="js/fullscreen.js"></script>
 </body>

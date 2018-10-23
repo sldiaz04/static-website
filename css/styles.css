@@ -1,0 +1,28 @@
+.bg-indigo {
+    background-color: #0a0082;
+}
+#image-profile {
+    margin-bottom: 10px;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}
+.languages {
+    width: 24px;
+    height: 18px;
+    border: 1px solid black;
+}
+.badge {
+    background-color: #fd0054;
+    position: relative;
+    top: -8px;
+    left: -4px;
+    transition: all 1s ease-in-out;
+}
+.badge:hover {
+    -ms-transform: scale(1.4);
+    /* IE 9 */
+    -webkit-transform: scale(1.4);
+    /* Safari */
+    transform: scale(1.4);
+}
