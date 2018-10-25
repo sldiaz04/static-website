@@ -305,9 +305,10 @@
     var mySwiper = new Swiper ('.swiper-carousel', {
       // Optional parameters
     loop: true,
-    autoplay: {
+    autoplay:false,
+    /*autoplay: {
         disableOnInteraction: false,
-    },
+    },*/
     // Responsive breakpoints
     breakpointsInverse: true,
     breakpoints: {
@@ -349,7 +350,7 @@
   });
 
     var swiper = new Swiper('.swiper-movies', {
-      slidesPerView: 8,
+      slidesPerView: 2,
       slidesPerColumn: 2,
       spaceBetween: 20,
       pagination: {
@@ -357,18 +358,20 @@
         dynamicBullets: true,
         clickable: true,
       },
+      breakpointsInverse: true,
       breakpoints: {
-        // when window width is <= 320px
-        320: {
-            slidesPerView: 2,
-        },
-        // when window width is <= 480px
-        480: {
-            slidesPerView: 2,
-        },
-        // when window width is <= 640px
-        640: {
+        // when window width is => 640px
+        340: {
             slidesPerView: 3,
+        },
+        530: {
+            slidesPerView: 4,
+        },
+        990: {
+            slidesPerView: 6,
+        },
+        1200: {
+            slidesPerView: 8,
         }
       }
     });
