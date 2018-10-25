@@ -5,116 +5,380 @@
     </title>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <!-- Bootstrap -->
-        <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet"/>
-
-        <!-- Fontawesome Icons -->
-        <script crossorigin="anonymous" defer="" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" src="https://use.fontawesome.com/releases/v5.0.9/js/all.js">
-         </script>
-        <!-- Google Icons-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-        
-        <link rel="stylesheet" href="css/b4_sidebar.css"/>
-        <link rel="stylesheet" href="css/styles.css"/>
+    <!-- Bootstrap -->
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet"/>
+    <!-- Fontawesome Icons -->
+    <script crossorigin="anonymous" defer="" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" src="https://use.fontawesome.com/releases/v5.0.9/js/all.js">
+    </script>
+    <!-- Google Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!-- Swiper -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css" rel="stylesheet"/>
+    <!-- Own styles -->
+    <link href="css/b4_sidebar.css" rel="stylesheet"/>
+    <link href="css/styles.css" rel="stylesheet"/>
 </head>
 <body>
     <header class="bg-indigo">
-        <div class="dropdown" style="float: right;position: relative; margin: 16px 10px;">
-            <a class="text-warning" data-toggle="dropdown" href="#" role="button"><img src="pinterest_profile_image.png" id="image-profile" alt="ImageProfile"></a>
+        <div class="dropdown" style="float: right;position: relative;padding-top: 14px;padding-right: 10px;">
+            <a class="text-warning" data-toggle="dropdown" href="#" role="button">
+                <img alt="ImageProfile" id="image-profile" src="pinterest_profile_image.png"/>
+            </a>
             <div class="dropdown-menu dropdown-menu-right bg-warning">
-                <button class="dropdown-item" type="button"><i class="fas fa-address-card mr-2"></i>Action</button>
-                <button class="dropdown-item" type="button"><i class="fas fa-pencil-alt mr-2"></i>Another action</button>
-                <div class="dropdown-divider"></div>
-                <button class="dropdown-item" type="button"><i class="fas fa-cog mr-2"></i>Something else</button>
+                <button class="dropdown-item" type="button">
+                    <i class="fas fa-address-card mr-2">
+                    </i>
+                    Action
+                </button>
+                <button class="dropdown-item" type="button">
+                    <i class="fas fa-pencil-alt mr-2">
+                    </i>
+                    Another action
+                </button>
+                <div class="dropdown-divider">
+                </div>
+                <button class="dropdown-item" type="button">
+                    <i class="fas fa-cog mr-2">
+                    </i>
+                    Something else
+                </button>
             </div>
         </div>
-
-        <a class="text-warning" href="javascript:void(0)" role="button" style="float: right;position: relative; margin: 16px 10px;" onclick="fullScreen();"><i id="fullscreen-icon" class="fas fa-expand fa-lg"></i></a>
-
-        <nav class="navbar navbar-expand-md bg-indigo sidebarNavigation" data-sidebarClass="bg-indigo">
-        <a class="navbar-brand text-warning" href="#">Movies-HD</a>
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler text-warning leftNavbarToggler" data-target="#navbarSupportedContent" type="button">
-            <i class="fas fa-bars">
+        <a class="text-warning" href="javascript:void(0)" onclick="fullScreen();" role="button" style="float: right;position: relative; padding-top: 16px;padding-right: 10px;">
+            <i class="fas fa-expand fa-lg" id="fullscreen-icon">
             </i>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle text-warning" data-toggle="dropdown" data-boundary="viewport" href="#" id="navbarDropdown" role="button">
-                        Categorías
-                    </a>
-                    <div aria-labelledby="navbarDropdown" class="dropdown-menu bg-warning">
-                        <a class="dropdown-item" href="#">
-                            Acción
+        </a>
+        <nav class="navbar navbar-expand-md bg-indigo sidebarNavigation" data-sidebarclass="bg-indigo">
+            <a class="navbar-brand text-warning" href="#">
+                Movies-HD
+            </a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler text-warning leftNavbarToggler" data-target="#navbarSupportedContent" type="button">
+                <i class="fas fa-bars">
+                </i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle text-warning" data-boundary="viewport" data-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                            Categorías
                         </a>
-                        <a class="dropdown-item" href="#">
-                            Animación
+                        <div aria-labelledby="navbarDropdown" class="dropdown-menu bg-warning">
+                            <a class="dropdown-item" href="#">
+                                Acción
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Animación
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Comedia
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Drama
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Fantástico
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Intriga
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Romántica
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Terror
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle text-warning" data-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                            Por año
                         </a>
-                        <a class="dropdown-item" href="#">
-                            Comedia
+                        <div aria-labelledby="navbarDropdown" class="dropdown-menu bg-warning">
+                            <a class="dropdown-item" href="#">
+                                Películas del 2018
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Películas del 2017
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Películas del 2016
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="#">
+                            Español
                         </a>
-                        <a class="dropdown-item" href="#">
-                            Drama
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="#">
+                            Subtituladas
                         </a>
-                        <a class="dropdown-item" href="#">
-                            Fantástico
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle text-warning" data-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                            <i class="fas fa-globe">
+                            </i>
                         </a>
-                        <a class="dropdown-item" href="#">
-                            Intriga
+                        <div aria-labelledby="navbarDropdown" class="dropdown-menu bg-warning">
+                            <a class="dropdown-item" href="#">
+                                <img alt="Español" class="languages mr-2" src="flags/es.png">
+                                    Español
+                                </img>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img alt="English" class="languages mr-2" src="flags/us.png">
+                                    English
+                                </img>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img alt="Deutsch" class="languages mr-2" src="flags/de.png">
+                                    Deutsch
+                                </img>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img alt="Français" class="languages mr-2" src="flags/fr.png">
+                                    Français
+                                </img>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="#">
+                            <i class="fas fa-heart">
+                            </i>
+                            <span class="badge badge-pill badge-danger">
+                                200
+                            </span>
                         </a>
-                        <a class="dropdown-item" href="#">
-                            Romántica
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="#">
+                            <i class="fas fa-shopping-cart">
+                            </i>
+                            <span class="badge badge-pill badge-danger">
+                                10
+                            </span>
                         </a>
-                        <a class="dropdown-item" href="#">
-                            Terror
-                        </a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-warning" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Por año</a>
-                    <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
-                        <a href="#" class="dropdown-item">Películas del 2018</a>
-                        <a href="#" class="dropdown-item">Películas del 2017</a>
-                        <a href="#" class="dropdown-item">Películas del 2016</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-warning" href="#">
-                        Español
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-warning" href="#">
-                        Subtituladas
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-warning" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe"></i></a>
-                    <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
-                        <a href="#" class="dropdown-item"><img class="languages mr-2" src="flags/es.png" alt="Español">Español</a>
-                        <a href="#" class="dropdown-item"><img class="languages mr-2" src="flags/us.png" alt="English">English</a>
-                        <a href="#" class="dropdown-item"><img class="languages mr-2" src="flags/de.png" alt="Deutsch">Deutsch</a>
-                        <a href="#" class="dropdown-item"><img class="languages mr-2" src="flags/fr.png" alt="Français">Français</a>
-                    </div>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link text-warning" href="#"><i class="fas fa-heart"></i><span class="badge badge-pill badge-danger">200</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-warning" href="#"><i class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-danger">10</span></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
-
+    <!-- Slider Carousel -->
+    <div class="swiper-container swiper-carousel">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img alt="" src="images/bOGkgRGdhrBYJSLpXaxhXVstddV.jpg">
+                </img>
+            </div>
+            <div class="swiper-slide">
+                <img alt="" src="images/oMaj75G2WFw66xI1TREg1hrToSg.jpg">
+                </img>
+            </div>
+            <div class="swiper-slide">
+                <img alt="" src="images/wBzMnQ01R9w58W6ucltdYfOyP4j.jpg">
+                </img>
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination">
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev">
+        </div>
+        <div class="swiper-button-next">
+        </div>
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar">
+        </div>
+    </div>
+    <!-- Slider Movies -->
+    <div class="container my-4">
+        <div class="swiper-container swiper-movies">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img alt="" src="images/mision_imposible.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/infinity_war.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/mision_imposible.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/infinity_war.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/mision_imposible.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/infinity_war.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/mision_imposible.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/infinity_war.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/mision_imposible.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/infinity_war.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/mision_imposible.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/infinity_war.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/mision_imposible.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/infinity_war.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/mision_imposible.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/infinity_war.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/mision_imposible.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/infinity_war.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/mision_imposible.jpg">
+                    </img>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" src="images/infinity_war.jpg">
+                    </img>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination">
+            </div>
+        </div>
+    </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script crossorigin="anonymous" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="js/b4_sidebar.js"></script>
-    <script src="js/fullscreen.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+    </script>
+    <script crossorigin="anonymous" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
+    </script>
+    <!-- Swiper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js.map">
+    </script>
+    <script>
+        $(document).ready(function () {
+    //initialize swiper when document ready
+    var mySwiper = new Swiper ('.swiper-carousel', {
+      // Optional parameters
+    loop: true,
+    autoplay: {
+        disableOnInteraction: false,
+    },
+    // Responsive breakpoints
+    breakpointsInverse: true,
+    breakpoints: {
+    // when window width is <= 320px
+    320: {
+
+    },
+    // when window width is <= 480px
+    480: {
+
+    },
+    // when window width is <= 640px
+    640: {
+
+    }
+  },
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable:true,
+      renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+    },
+    centeredSlides:true,
+    /*slidesPerView:2,*/
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar'
+    },
+    })
+  });
+
+    var swiper = new Swiper('.swiper-movies', {
+      slidesPerView: 8,
+      slidesPerColumn: 2,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+        clickable: true,
+      },
+      breakpoints: {
+        // when window width is <= 320px
+        320: {
+            slidesPerView: 2,
+        },
+        // when window width is <= 480px
+        480: {
+            slidesPerView: 2,
+        },
+        // when window width is <= 640px
+        640: {
+            slidesPerView: 3,
+        }
+      }
+    });
+    </script>
+    <!-- Own js -->
+    <script src="js/b4_sidebar.js">
+    </script>
+    <script src="js/fullscreen.js">
+    </script>
 </body>
