@@ -17,6 +17,7 @@
     <!-- Own styles -->
     <link href="css/b4_sidebar.css" rel="stylesheet"/>
     <link href="css/styles.css" rel="stylesheet"/>
+    <link href="css/movie.css" rel="stylesheet"/>
 </head>
 <body>
     <header class="bg-indigo">
@@ -204,6 +205,27 @@
                 <div class="swiper-slide">
                     <img alt="" src="images/mision_imposible.jpg">
                     </img>
+                    <div class="moviename">
+                        <div class="movietext">
+                            Movie Name
+                        </div>
+                    </div>
+                    <div class="play">
+                        <div class="play-icon">
+                            <a href="#">
+                                <i class="far fa-play-circle fa-4x">
+                                </i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="cart-icon">
+                            <a href="#">
+                                <i class="fas fa-cart-plus fa-2x">
+                                </i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-slide">
                     <img alt="" src="images/infinity_war.jpg">
@@ -295,12 +317,11 @@
     <script crossorigin="anonymous" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
     </script>
     <!-- Swiper -->
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js">
-    </script>
-    </script>
-    <script>
-        $(document).ready(function () {
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js">
+</script>
+<script>
+    $(document).ready(function () {
     //initialize swiper when document ready
     var mySwiper = new Swiper ('.swiper-carousel', {
       // Optional parameters
@@ -375,10 +396,29 @@
         }
       }
     });
-    </script>
-    <!-- Own js -->
-    <script src="js/b4_sidebar.js">
-    </script>
-    <script src="js/fullscreen.js">
-    </script>
-</body>
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      console.log('Esto es un dispositivo móvil');
+      /*let playIcons = document.querySelectorAll(".play");
+      let cartIcons = document.querySelectorAll(".cart");
+      let movieName = document.querySelectorAll(".moviename");
+      playIcons.forEach(function(element) {
+        element.style.opacity = "1";
+      });
+      cartIcons.forEach(function(element) {
+        element.style.height = "40px";
+        element.style.opacity = "1";
+      });
+      movieName.forEach(function(element) {
+        element.style.height = "40px";
+        element.style.opacity = "1";
+      });*/
+    }else{
+        console.log("Esto es un ordenador");
+    }
+</script>
+<!-- Own js -->
+<script src="js/b4_sidebar.js">
+</script>
+<script src="js/fullscreen.js">
+</script>
