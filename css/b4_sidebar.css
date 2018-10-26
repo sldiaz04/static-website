@@ -26,11 +26,11 @@
 }
 .sideMenu {
     left: -100%;
-    top: 52px;
+    top: 0;
     transition: all ease 0.5s;
     overflow: hidden;
     width: 100%;
-    z-index: 999;
+    z-index: 1200;
     max-width: 80%;
     margin-bottom: 0;
     background: #282C35 !important;
