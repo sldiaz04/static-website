@@ -1,6 +1,6 @@
 window.onload = function() {
     window.jQuery ? $(document).ready(function() {
-        $(".sidebarNavigation .navbar-collapse").hide().clone().appendTo("body").removeAttr("class").addClass("sideMenu").show(), $("body").append("<div class='overlay'></div>"), $(".sideMenu").addClass($(".sidebarNavigation").attr("data-sidebarClass")), $(".navbar-toggle, .navbar-toggler").on("click", function() {
+        $(".sidebarNavigation .navbar-collapse").hide().clone().appendTo("body").removeAttr("class").addClass("sideMenu").show(), $("body").append("<div id='overlay' class='overlay'></div>"), $(".sideMenu").addClass($(".sidebarNavigation").attr("data-sidebarClass")), $(".navbar-toggle, .navbar-toggler").on("click", function() {
             $(".sideMenu, .overlay").toggleClass("open"), $(".overlay, .dropdown-menu").on("click", function() {
                 $(".overlay").removeClass("open"), $(".sideMenu").removeClass("open")
                 enableScroll()
@@ -20,8 +20,10 @@ function preventDefault(e){
 }
 
 function disableScroll(){
-    document.body.addEventListener('touchmove', preventDefault, { passive: false });
+    //document.body.addEventListener('touchmove', preventDefault, { passive: false });
+    document.getElementById("overlay").addEventListener('touchmove', preventDefault, { passive: false });
 }
 function enableScroll(){
-    document.body.removeEventListener('touchmove', preventDefault, { passive: false });
+    //document.body.removeEventListener('touchmove', preventDefault, { passive: false });
+    document.getElementById("overlay").addEventListener('touchmove', preventDefault, { passive: false });
 }
