@@ -26,7 +26,8 @@
 }
 .sideMenu {
     left: -100%;
-    top: 52px;
+    top: 0;
+    padding-top: 52px;
     transition: all ease 0.5s;
     overflow: hidden;
     width: 100%;
