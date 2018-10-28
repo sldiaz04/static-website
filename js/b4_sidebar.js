@@ -21,9 +21,11 @@ function preventDefault(e){
 
 function disableScroll(){
     //document.body.addEventListener('touchmove', preventDefault, { passive: false });
+    document.body.style.overflow = "hidden";
     document.getElementById("overlay").addEventListener('touchmove', preventDefault, { passive: false });
 }
 function enableScroll(){
     //document.body.removeEventListener('touchmove', preventDefault, { passive: false });
+    document.body.style.overflow = "scroll";
     document.getElementById("overlay").addEventListener('touchmove', preventDefault, { passive: false });
 }
