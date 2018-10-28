@@ -26,11 +26,12 @@
 }
 .sideMenu {
     left: -100%;
-    top: 52px;
+    top: 0;
+    padding-top: 2rem;
     transition: all ease 0.5s;
     overflow: hidden;
     width: 100%;
-    z-index: 999;
+    z-index: 1100;
     max-width: 80%;
     margin-bottom: 0;
     background: #282C35 !important;
@@ -43,8 +44,4 @@
 .sideMenu ul {
     margin: 0;
     padding: 0 15px
-}
-.stop-scrolling {
-  height: 100%;
-  overflow: hidden;
 }
