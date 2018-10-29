@@ -20,12 +20,10 @@ function preventDefault(e){
 }
 
 function disableScroll(){
-    //document.body.addEventListener('touchmove', preventDefault, { passive: false });
-    document.getElementById("overlay").addEventListener('touchmove', preventDefault, { passive: false });
-    $('body').addClass("modal-open");
+    document.body.addEventListener('touchmove', preventDefault, { passive: false });
+    //document.getElementById("overlay").addEventListener('touchmove', preventDefault, { passive: false });
 }
 function enableScroll(){
-    //document.body.removeEventListener('touchmove', preventDefault, { passive: false });
-    document.getElementById("overlay").removeEventListener('touchmove', preventDefault, { passive: false });
-    $('body').removeClass("modal-open");
+    document.body.removeEventListener('touchmove', preventDefault, { passive: false });
+    //document.getElementById("overlay").removeEventListener('touchmove', preventDefault, { passive: false });
 }
