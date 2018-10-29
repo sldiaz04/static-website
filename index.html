@@ -20,10 +20,11 @@
     <link href="css/movie.css" rel="stylesheet"/>
 </head>
 <body>
-    <img class="background-image" src="images/halloween-wallpapers.jpg" alt="Background image"/>
-    <div class="header-overlay"></div>
+    <img alt="Background image" class="background-image" src="images/halloween-wallpapers.jpg"/>
+    <div class="header-overlay">
+    </div>
     <header class="fixed-top bg-indigo">
-        <div class="dropdown" style="float: right;position: relative; padding-top: 14px;padding-right: 10px;">
+        <div class="dropdown" style="float: right;position: relative; padding-top: 14px;padding-right: 10px;padding-left: 10px;">
             <a class="text-warning" data-toggle="dropdown" href="#" role="button">
                 <img alt="ImageProfile" id="image-profile" src="pinterest_profile_image.png"/>
             </a>
@@ -93,30 +94,17 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle text-warning" data-toggle="dropdown" href="#" id="YearsDropdown" role="button">
-                            Por año
+                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle text-warning" data-toggle="dropdown" href="#" id="LanguageDropdown" role="button">
+                            Idioma
                         </a>
-                        <div aria-labelledby="YearsDropdown" class="dropdown-menu bg-warning">
+                        <div aria-labelledby="LanguageDropdown" class="dropdown-menu bg-warning">
                             <a class="dropdown-item" href="#">
-                                Películas del 2018
+                                Español
                             </a>
                             <a class="dropdown-item" href="#">
-                                Películas del 2017
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                Películas del 2016
+                                Inglés
                             </a>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-warning" href="#">
-                            Español
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-warning" href="#">
-                            Subtituladas
-                        </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle text-warning" data-toggle="dropdown" href="#" id="navbarDropdown" role="button">
@@ -144,6 +132,18 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav">
+                    <form action="" method="post" onsubmit=" return preventSearchEmptyField();">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-warning" id="button-addon2" type="button">
+                                    <i class="fas fa-search">
+                                    </i>
+                                </button>
+                            </div>
+                            <input aria-label="Search" class="form-control" id="search_movie" name="image" placeholder="Search" type="text" style="background-color: rgba(40,44,53,0.5);color: #eee;">
+                            </input>
+                        </div>
+                    </form>
                     <li class="nav-item">
                         <a class="nav-link text-warning" href="#">
                             <i class="fas fa-heart">
@@ -204,67 +204,68 @@
             Ver todo
         </button>
         <hr>
-        <div class="swiper-container swiper-movies">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img alt="" src="images/mision_imposible.jpg"/>
-                    <div class="moviename">
-                        <div class="movietext">
-                            Movie Name Movie Name
+            <div class="swiper-container swiper-movies">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img alt="" src="images/mision_imposible.jpg"/>
+                        <div class="moviename">
+                            <div class="movietext">
+                                Movie Name Movie Name
+                            </div>
+                        </div>
+                        <div class="play">
+                            <div class="play-icon">
+                                <a href="#">
+                                    <i class="far fa-play-circle fa-4x">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="cart">
+                            <div class="cart-icon">
+                                <a href="#">
+                                    <i class="fas fa-cart-plus fa-2x">
+                                    </i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="play">
-                        <div class="play-icon">
-                            <a href="#">
-                                <i class="far fa-play-circle fa-4x">
-                                </i>
-                            </a>
-                        </div>
+                    <div class="swiper-slide">
+                        <img alt="" src="images/infinity_war.jpg"/>
                     </div>
-                    <div class="cart">
-                        <div class="cart-icon">
-                            <a href="#">
-                                <i class="fas fa-cart-plus fa-2x">
-                                </i>
-                            </a>
-                        </div>
+                    <div class="swiper-slide">
+                        <img alt="" src="images/mision_imposible.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img alt="" src="images/infinity_war.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img alt="" src="images/mision_imposible.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img alt="" src="images/infinity_war.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img alt="" src="images/mision_imposible.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img alt="" src="images/infinity_war.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img alt="" src="images/mision_imposible.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img alt="" src="images/infinity_war.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img alt="" src="images/mision_imposible.jpg"/>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <img alt="" src="images/infinity_war.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                    <img alt="" src="images/mision_imposible.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                    <img alt="" src="images/infinity_war.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                    <img alt="" src="images/mision_imposible.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                    <img alt="" src="images/infinity_war.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                    <img alt="" src="images/mision_imposible.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                    <img alt="" src="images/infinity_war.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                    <img alt="" src="images/mision_imposible.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                    <img alt="" src="images/infinity_war.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                    <img alt="" src="images/mision_imposible.jpg"/>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination">
                 </div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination">
-            </div>
-        </div>
+        </hr>
     </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
